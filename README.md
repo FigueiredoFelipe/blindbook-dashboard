@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦆 BlindBook Dashboard – AI-Powered Notification System
 
-## Getting Started
+A prototype of an intelligent dashboard built with **Next.js**, **Supabase**, and **Claude AI**, inspired by the BlindBook platform used in duck hunting clubs.
 
-First, run the development server:
+This project demonstrates how to integrate real-time data, user personalization, and AI insights in a fullstack React application.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Features
+
+- 🔐 **User Authentication** via Supabase
+- 🌅 **Sunrise/Sunset-based Alerts**
+- 🤖 **Claude-generated Recommendations** for hunting strategy
+- ⚙️ **Alert Configuration Panel**
+- 📉 **Data Visualizations** (graphs & timelines)
+- 💾 **Offline Fallback** using localStorage / IndexedDB
+- 🧠 Built with **Claude CLI & Windsurf** for AI-assisted coding
+
+---
+
+## 🧱 Tech Stack
+
+| Tech         | Description                   |
+| ------------ | ----------------------------- |
+| Next.js 14   | App Router + React 18         |
+| Tailwind CSS | Modern, utility-first styling |
+| Supabase     | Auth, DB, Realtime            |
+| Claude CLI   | AI assistant (via Anthropic)  |
+| TypeScript   | Type safety throughout        |
+
+---
+
+## 🗂️ Project Structure
+
+```
+/app
+  /dashboard
+    page.tsx             # Main dashboard view
+    Notifications.tsx    # Alert list
+    InsightCard.tsx      # AI-generated recommendations
+
+/hooks
+  useNotifications.ts    # Fetch and manage user alerts
+  useSunEvents.ts        # Time-based logic
+
+/lib
+  claudeClient.ts        # Integration with Claude
+
+/supabase
+  schema.sql             # DB schema: users, notifications, preferences
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/YOUR_USERNAME/blindbook-dashboard.git
+cd blindbook-dashboard
+npm install
+npm run dev
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You'll need a `.env.local` file with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-## Deploy on Vercel
+Claude API runs locally via `claude` CLI and does not require a token here.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📌 Inspiration
+
+Based on the [BlindBook Platform](https://www.blindbookai.com) — an AI-powered duck club management system. This dashboard reimagines part of its functionality for demo and interview purposes.
+
+---
+
+## 📄 License
+
+MIT © Felipe José Negreiros Figueiredo
