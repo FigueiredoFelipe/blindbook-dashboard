@@ -22,7 +22,7 @@ This project demonstrates how to integrate real-time data, user personalization,
 
 | Tech         | Description                   |
 | ------------ | ----------------------------- |
-| Next.js 14   | App Router + React 18         |
+| Next.js 15.4 | App Router + React 18         |
 | Tailwind CSS | Modern, utility-first styling |
 | Supabase     | Auth, DB, Realtime            |
 | Claude CLI   | AI assistant (via Anthropic)  |
